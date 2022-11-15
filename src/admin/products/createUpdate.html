@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../dist/output.css">
+    <script src="createUpdate.js" defer type="module"></script>
+</head>
+<body class="bg-blue font-primary">
+    <header class="bg-pink h-24 items-center flex sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center text-2xl ">
+            <div class="cursor-pointer">
+                <a href="../../public/index/">home</a>
+            </div>
+            <div class="flex items-center h-12 cursor-pointer">
+                <h1>Admin Panel</h1>
+                <a href="../index.html" class="h-full"><img src="../../../data/images/face.jpeg" alt="cart" class="h-full"></a>
+            </div>
+        </div>
+    </header>
+    <div class="bg-white h-10 flex justify-center gap-8 items-center">
+        <a href="../index.html">All products</a>
+        <a href="../orders.html">Orders</a>
+        <a href="./products/add.html">Add product</a>
+        <button id="restore">Restore stock</button>
+    </div>
+    <main class="mx-auto container py-8">
+        <h1 class="text-3xl w-fit mx-auto py-1" id="title">Adding a product</h1>
+        <div class="grid grid-cols-2 items-center">
+            <div class="flex justify-center">
+                <div class="border-[8px] border-pink rounded-2xl w-[75%] h-[34rem]">
+                    <img src="" alt="" id="URL">
+                </div>
+            </div>
+            <form action="#" class="flex flex-col font-secondary gap-6  mx-auto items-center  justify-center">
+                <p id="message" class="text-2xl font-primary"></p>
+                <div id="namebox" class="flex flex-col">
+                    <input type="text" name="name" id="name" placeholder="Name" class="w-80 py-2 px-2 rounded-md border-2 border-pink">
+                    <span id="nameErr" class="w-80 text-wrap"></span>
+                </div>
+                <div id="pricebox" class="flex flex-col">
+                    <input type="text" name="price" id="price" placeholder="Price" class="w-80 py-2 px-2 rounded-md border-2 border-pink">
+                    <span id="priceErr" class="w-80 text-wrap"></span>
+                </div>
+                <div id="descriptionbox" class="flex flex-col">
+                    <input type="text" name="description" id="description" placeholder="Description" class="w-80 py-2 px-2 rounded-md border-2 border-pink">
+                    <span id="descriptionErr" class="w-80 text-wrap"></span>
+                </div>
+                <div id="urlbox" class="flex flex-col">
+                    <input type="text" name="url" id="url" placeholder="Url" class="w-80 py-2 px-2 rounded-md border-2 border-pink">
+                    <span id="urlErr" class="w-80 text-wrap"></span>
+                </div>
+                <button id="send" class="bg-pink py-2 px-4 rounded-lg border-brown border-[3px]">add product</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

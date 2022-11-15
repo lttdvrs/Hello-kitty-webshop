@@ -1,0 +1,79 @@
+[
+    {
+        "id" : 1,
+        "price" : 25,
+        "name" : "Hello Kitty cow plushie",
+        "description" : "Hello Kitty Sanrio plushie in cow uniform.",
+        "image" : "https://cdn.shopify.com/s/files/1/0584/3841/products/Kidrobot-Sanrio-Hello-Kitty-Nissa-Cup-O-Noodles-Cow-Plush-1_600x.jpg?v=1651165065"
+    },
+    {
+        "id" : 2,
+        "price" : 15,
+        "name" : "Hello Kitty funko POP!",
+        "description" : "Hello Kitty Sanrio funko POP! id: 46.",
+        "image" : "https://cdn.shopify.com/s/files/1/0416/8083/0620/products/55766_HKxNissin_HKinCup_POP_GLAM-1-HiRes_1_1200x.jpg?v=1655940778" 
+    },
+    {
+        "id" : 3,
+        "price" : 20,
+        "name" : "Hello Kitty plushie!",
+        "description" : "Hello kitty standard Sanrio plushie.",
+        "image" : "https://shop.universalorlando.com/merchimages/p-hello-kitty-plush-1304855-2.jpg" 
+    },
+    {
+        "id" : 4,
+        "price" : 50,
+        "name" : "Hello Kitty T-Shirt",
+        "description" : "x Hello Kitty NRG HK2 Top S.",
+        "image" : "https://www.solebox.com/dw/image/v2/BDCB_PRD/on/demandware.static/-/Sites-solebox-master-de/default/dwd950a90a/2090998_PS.jpg?sw=780&sh=780&sm=fit&sfrm=png" 
+    },
+    {
+        "id" : 5,
+        "price" : 30,
+        "name" : "Sanrio tote bag",
+        "description" : "A simple carry-all Sanrio characters tote.",
+        "image" : "https://cdn.shopify.com/s/files/1/0416/8083/0620/products/138380-1_800x.jpg?v=1666820138" 
+    },
+    {
+        "id" : 6,
+        "price" : 15,
+        "name" : "Fluffy Mascot plush pink",
+        "description" : "Hello Kitty Fluffy Baby mascot plushie, around 5' tall.",
+        "image" : "https://cdn.shopify.com/s/files/1/0416/8083/0620/products/591963-Zoom.1_800x.jpg?v=1652223812" 
+    },
+    {
+        "id" : 7,
+        "price" : 15,
+        "name" : "Keroppi Mascot plush",
+        "description" : "Hello Kitty Keroppi plushie, around 6' tall.",
+        "image" : "https://cdn.shopify.com/s/files/1/0416/8083/0620/products/594717-Zoom.1_800x.jpg?v=1664907986" 
+    },
+    {
+        "id" : 8,
+        "price" : 75,
+        "name" : "Hello Kitty mini backpack",
+        "description" : "Cheery color-blocked mini backpack, with Hello Kitty characters.",
+        "image" : "https://cdn.shopify.com/s/files/1/0416/8083/0620/products/SANBK0426-LFSANRIOHELLOKITTYANDFRIENDSCOLORBLOCKMINIBACKPACK0006FRONT_800x.jpg?v=1663815015" 
+    },
+    {
+        "id" : 9,
+        "price" : 20,
+        "name" : "Hello Kitty classic mascot plush",
+        "description" : "Small Hello Kitty mascot plush around 6' tall.",
+        "image" : "https://cdn.shopify.com/s/files/1/0416/8083/0620/products/594601-Zoom.1_800x.jpg?v=1664907999" 
+    },
+    {
+        "id" : 10,
+        "price" : 30,
+        "name" : "Hangyodon Ribbon pillow",
+        "description" : "Soft and squishy, perfect to hug.",
+        "image" : "https://cdn.shopify.com/s/files/1/0416/8083/0620/products/126837-1_800x.jpg?v=1665073673" 
+    },
+    {
+        "id" : 11,
+        "price" : 20,
+        "name" : "Hello Kitty tiger",
+        "description" : "The cutest little tiger.",
+        "image" : "https://cdn.shopify.com/s/files/1/0416/8083/0620/products/180475-Zoom.1_800x.jpg?v=1657231203" 
+    }
+]

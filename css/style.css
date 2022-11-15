@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Krungthep";
+    src: url("../fonts/Krungthep.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Lao Sangam MN";
+    src: url("../fonts/lao-sangam-mn.ttf");
+    font-weight: 400;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

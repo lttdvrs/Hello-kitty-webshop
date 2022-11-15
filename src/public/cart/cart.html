@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../../dist/output.css">
+    <script src="cart.js" defer type="module"></script>
+</head>
+<body class="bg-blue font-primary">
+    <header class="bg-pink h-24 items-center flex sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center text-2xl ">
+            <div class="cursor-pointer">
+                <a href="../index/index.html">home</a>
+            </div>
+            <div class="flex items-center h-16 cursor-pointer">
+                <h1>cart</h1>
+                <a href="../cart/cart.html" class="h-full"><img src="../../../data/images/kitttty.png" alt="cart" class="h-full"></a>
+            </div>
+        </div>
+    </header>
+    <main class="mx-auto container pt-16">
+        <div class="w-[85%] mx-auto grid grid-cols-2 gap-5">
+            <div class="no-scrollbar overflow-auto h-[40rem] flex flex-col gap-12" id="container-1">
+
+            </div>
+            <div class="flex flex-col gap-4 items-center" id="container-2">
+                <div class="h-10">
+                    <img src="../../../data/images/face.jpeg" alt="" class="h-full">
+                </div>
+                <div class="flex justify-between w-[70%]">
+                    <h1 class="text-xl">SUBTOTAL</h1>
+                    <p class="font-secondary text-xl" id="subtotal"></p>
+                </div>
+                <div class="flex justify-between w-[70%]">
+                    <h1 class="text-xl">SHIPPING</h1>
+                    <p class="font-secondary text-xl" id="shipping"></p>
+                </div>
+                <hr class="w-[70%]">
+                <div class="flex justify-between w-[70%]">
+                    <h1 class="text-2xl">TOTAL</h1>
+                    <p class="font-secondary text-2xl" id="total"></p>
+                </div>
+                <div class="w-[70%] flex justify-end items-center pt-4">
+                    <button class=" bg-pink h-10 px-4 border-[3px] border-dark rounded-lg" id="order-btn">order</button>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>
