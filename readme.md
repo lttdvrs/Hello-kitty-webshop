@@ -26,7 +26,9 @@ Om mijn project lokaal te runnen zorg er voor dat je in de juiste directory zit.
 (The-Webshop-392ec166-c340ede8) <-- juiste map
 
 typ in de terminal : 
+
 > npm run watch 
+
 Als alles nu goed is gegaan krijg je dit te zien :
 
 > watch
