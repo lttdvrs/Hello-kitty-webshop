@@ -1,4 +1,4 @@
-import { createEl, fetchData } from "../modules.js";
+import { createEl, fetchData } from "./src/public/modules.js";
 
 const file = '../../../data/products.json';
 const container = document.getElementById('items-container')
