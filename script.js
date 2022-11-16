@@ -17,20 +17,19 @@ if (!localStorage.getItem('cart')){
 }
 
 items.forEach(item => {
-    let box = createEl(' ', 'div', 'box w-80');
-    let imagebox = createEl(' ', 'div', 'bg-pink border-[8px] border-pink rounded-2xl');
-    let linkToItem = createEl(' ', 'a');
+    const box = createEl(' ', 'div', 'box w-80');
+    const imagebox = createEl(' ', 'div', 'bg-pink border-[8px] border-pink rounded-2xl');
+    const linkToItem = createEl(' ', 'a');
     linkToItem.href = `../item/item.html?id=${item.id}`;
-    let image = document.createElement('img');
+    const image = document.createElement('img');
     image.src = item.image;
-
     image.className = 'w-full h-96 object-cover';
 
-    let infobox = createEl(' ', 'div', 'flex justify-center flex-col gap-2 pt-2');
-    let buyNameBox = createEl(' ', 'div', 'flex justify-between');
-    let productName = createEl(item.name, 'h1', 'text-wrap mx-auto text-lg text-center');
-    let productPrice = createEl(`$${item.price}`, 'p' , 'mx-auto text-xl font-secondary');
-    let addToCart = createEl('<i class="fa-solid fa-cart-shopping"></i>', 'button', 'bg-pink h-8 w-10 text-dark hover:bg-[#D99DC8] ');
+    const infobox = createEl(' ', 'div', 'flex justify-center flex-col gap-2 pt-2');
+    const buyNameBox = createEl(' ', 'div', 'flex justify-between');
+    const productName = createEl(item.name, 'h1', 'text-wrap mx-auto text-lg text-center');
+    const productPrice = createEl(`$${item.price}`, 'p' , 'mx-auto text-xl font-secondary');
+    const addToCart = createEl('<i class="fa-solid fa-cart-shopping"></i>', 'button', 'bg-pink h-8 w-10 text-dark hover:bg-[#D99DC8] ');
     container.appendChild(box);
     box.appendChild(imagebox);
     imagebox.appendChild(linkToItem);

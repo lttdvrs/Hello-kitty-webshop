@@ -10,6 +10,8 @@ const total = document.getElementById('total');
 const shippingEl = document.getElementById('shipping');
 let subtotal = 0;
 const order = document.getElementById('order-btn');
+let orderTotal = 0;
+
 if (cartItems != null) {
     cartItems.forEach(item => {
         difIDS.push(item.id);
@@ -31,7 +33,7 @@ if (cartItems != null) {
 
     cartItems.reverse();
     cartItems.forEach(item => {
-        subtotal+=item.price;
+        Number(subtotal+=item.price).toFixed(2);
         let amount = difIDS.filter(x => x == item.id).length;
         const box = createEl('', 'div', 'box flex gap-6');
         box.id = item.id;
@@ -68,9 +70,8 @@ if (cartItems != null) {
             cartItems.push(item);
             localStorage.setItem('cart', JSON.stringify(cartItems));
             difIDS.push(item.id);
-            subtotal+=item.price;
-            subtotalEl.innerHTML = `$${Number(subtotal)}`;     
-            total.innerHTML = `$${Number(totalPrice +  shipping)}`;
+            Number(subtotal+=item.price).toFixed(2);
+            orderTotal = price(subtotal);
             amountInCart.innerHTML = difIDS.filter(x => x == item.id).length;
         });
 
@@ -84,11 +85,7 @@ if (cartItems != null) {
     container1.appendChild(message);
 }
 
-let shipping = subtotal >= 100 ? 0 : 5;
-subtotalEl.innerHTML = `$${Number(subtotal).toFixed(2)}`;
-shippingEl.innerHTML = `$${shipping}`;
-let totalPrice = subtotal + shipping;
-total.innerHTML = `$${Number(totalPrice).toFixed(2)}`;
+orderTotal = price(subtotal);
 let orderMessage = createEl('', 'p', 'text-xl font-secondary text-right');
 
 function orderDetails(orderedItems) {
@@ -106,7 +103,7 @@ function orderDetails(orderedItems) {
     });
 
     orderDetails.id = ID;
-    orderDetails.total = totalPrice;
+    orderDetails.total = orderTotal;
     orderDetails.time = new Date().toLocaleTimeString();
     orderDetails.items = allItems;
 
@@ -124,7 +121,7 @@ order.addEventListener('click', () => {
     } else {
         orderMessage.innerHTML = 'Order unsuccesfull';
     }
-    container2.appendChild(orderMessage)
+    container2.appendChild(orderMessage);
 });
 
 function processOrder(order) {
@@ -137,4 +134,14 @@ function processOrder(order) {
         orderArr.push(order);
         localStorage.setItem('orders', JSON.stringify(orderArr));
     }
+}
+
+function price(subtotal) {
+    let shipping = subtotal >= 100 ? 0 : 5;
+    subtotalEl.innerHTML = `$${Number(subtotal).toFixed(2)}`;
+    shippingEl.innerHTML = `$${shipping}`;
+    let totalPrice = Number(subtotal + shipping).toFixed(2);
+    total.innerHTML = `$${totalPrice}`;
+
+    return totalPrice;
 }

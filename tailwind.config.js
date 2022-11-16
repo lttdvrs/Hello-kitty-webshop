@@ -16,6 +16,9 @@ module.exports = {
       fontFamily : {
         'primary' : ["Krungthep", "sans-serif"],
         'secondary' : ["lao-sangam-mn", "sans-serif"]
+      },
+      screens : {
+        md : '820px'
       }
     },
   },

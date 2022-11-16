@@ -26,10 +26,10 @@ if (!localStorage.getItem('cart')){
 }
 
 function showAll(item) {
-    let imageBox = createEl('', 'div', 'border-[8px] border-pink rounded-2xl w-[85%]');
+    let imageBox = createEl('', 'div', 'border-[8px] border-pink rounded-2xl md:w-[85%] w-full');
     let imageEl = document.createElement('img');
     imageEl.src = item.image;
-    imageEl.className = 'w-full h-[38rem] object-cover';
+    imageEl.className = 'w-full md:h-[38rem] h-[32rem] object-cover';
 
     let infoBox = createEl('', 'div', 'py-12 flex flex-col gap-10');
     let itemName = createEl(item.name, 'h1' , 'text-5xl text-wrap w-[90%]');
