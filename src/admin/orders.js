@@ -11,7 +11,7 @@ restore.addEventListener('click', () => {
 
 if (orders) {
     orders.forEach(order => {
-        const box = createEl('', 'div', 'bg-pink flex justify-between w-[55%] mx-auto px-3 py-4 rounded-md')
+        const box = createEl('', 'div', 'bg-pink flex justify-between w-[75%] md:w-[55%] mx-auto px-3 py-4 rounded-md')
         const ID = createEl(`Order ID: ${orderID}`, 'p', 'font-secondary');
         const price = createEl(`$${order.total}` , 'p' , 'font-secondary');
         const orderDate = createEl(order.time , 'p');

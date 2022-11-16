@@ -50,7 +50,6 @@ function showAll(item) {
         cartArr.push(item);
         localStorage.setItem('cart', JSON.stringify(cartArr));
     });
-
 }
 
 showAll(item);

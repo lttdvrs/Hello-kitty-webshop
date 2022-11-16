@@ -19,7 +19,7 @@ module.exports = {
         'secondary' : ["lao-sangam-mn", "sans-serif"]
       },
       screens : {
-        md : '820px'
+        md : '821px'
       }
     },
   },

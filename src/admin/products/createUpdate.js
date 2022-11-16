@@ -23,6 +23,7 @@ const urlParams = new URLSearchParams(window.location.search);
 let idNeeded;
 let title = document.getElementById('title');
 title.innerText = 'Adding a product';
+send.innerText = 'add';
 
 if (urlParams.get('id')) {
     idNeeded = urlParams.get('id');
@@ -37,6 +38,7 @@ if (urlParams.get('id')) {
         idNeeded = null;
     }
     title.innerText = 'Editing a product';
+    send.innerText = 'edit';
 } 
 
 let ids = [];
@@ -67,7 +69,7 @@ send.addEventListener('click', (e) => {
                 items.forEach(i => {
                     if (i.id == idNeeded) {
                         i.name = name.value;
-                        i.price = price.value;
+                        i.price = Number(price.value);
                         i.description = description.value;
                         i.image = url.value;
                     }

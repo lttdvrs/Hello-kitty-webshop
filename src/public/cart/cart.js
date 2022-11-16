@@ -23,17 +23,13 @@ if (cartItems != null) {
         }
     });
 
-    var firstRun = cartItems.sort(function(a, b) {
+    cartItems = cartItems.sort(function(a, b) {
         return (a.id - b.id);
     });
     
-    cartItems = firstRun.sort(function(a, b) {
-        return (a.name - b.name);
-    });
-
     cartItems.reverse();
     cartItems.forEach(item => {
-        Number(subtotal+=item.price).toFixed(2);
+        subtotal += Number(item.price);
         let amount = difIDS.filter(x => x == item.id).length;
         const box = createEl('', 'div', 'box flex gap-6');
         box.id = item.id;
@@ -81,7 +77,7 @@ if (cartItems != null) {
 
     });
 } else {
-    const message = createEl('There are no items in your cart.', 'p');
+    const message = createEl('There are no items in your cart.', 'p', 'mx-auto');
     container1.appendChild(message);
 }
 

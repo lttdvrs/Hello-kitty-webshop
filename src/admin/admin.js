@@ -28,7 +28,6 @@ if (items.length >= 1) {
 
         const editBox = createEl('', 'div', 'flex flex-col gap-2');
         const editBTN = createEl('edit', 'a', 'bg-pink py-1 border-[1px] w-14 text-center');
-        editBTN.href = `./products/createUpdate.html?id=${item.id}`;
         const deleteBTN = createEl('delete', 'button', 'bg-pink py-1 border-[1px] w-14');
 
         container1.appendChild(box);
@@ -45,6 +44,8 @@ if (items.length >= 1) {
         deleteBTN.addEventListener('click', () => {
             deleteFromData(items, item, 'items');
         });
+
+        editBTN.href = `./products/createUpdate.html?id=${item.id}`;
     });
 }
 
