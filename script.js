@@ -1,6 +1,6 @@
 import { createEl, fetchData } from "./src/public/modules.js";
 
-const file = '../../../data/products.json';
+const file = './data/products.json';
 const container = document.getElementById('items-container')
 
 if (!localStorage.getItem('items') || localStorage.getItem('items') == '[]') {
@@ -20,7 +20,7 @@ items.forEach(item => {
     const box = createEl(' ', 'div', 'box w-80');
     const imagebox = createEl(' ', 'div', 'bg-pink border-[8px] border-pink rounded-2xl');
     const linkToItem = createEl(' ', 'a');
-    linkToItem.href = `../item/item.html?id=${item.id}`;
+    linkToItem.href = `./src/public/item/item.html?id=${item.id}`;
     const image = document.createElement('img');
     image.src = item.image;
     image.className = 'w-full h-96 object-cover';
