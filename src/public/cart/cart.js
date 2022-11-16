@@ -113,7 +113,7 @@ order.addEventListener('click', () => {
         orderMessage.innerHTML = 'Order succesfull!';
         setTimeout(() => {
             window.location.reload();
-        }, 4000);
+        }, 3000);
     } else {
         orderMessage.innerHTML = 'Order unsuccesfull';
     }

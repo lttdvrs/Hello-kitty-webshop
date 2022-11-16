@@ -1,6 +1,7 @@
 # Hello Kitty Webshop
 
 Welkom bij DE plek waar je de allerbeste Hello Kitty producten kan kopen.
+Bestellingen vanaf $100 krijgen gratis verzendkosten!
 
 ## Over de webshop
 
@@ -17,6 +18,10 @@ wat voor items er in mijn webshop te verkrijgen zijn.
 Om mijn webshop te bezoeken kun je de volgende link klikken:
 
 - https://hello-kitty-webshop.netlify.app/
+
+#### Admin link
+
+- https://hello-kitty-webshop.netlify.app/src/admin
 
 De webshop is responsive op web, mobile en tablet.
 
@@ -36,5 +41,9 @@ Als alles nu goed is gegaan krijg je dit te zien :
 > npx tailwindcss -i ./css/style.css -o ./dist/output.css --watch
 
 Nu is tailwind opgestart en kan je op de index.html openen in je browser.
+
+#### Admin link
+
+The-Webshop-392ec166-c340ede8/src/admin/
 
 
