@@ -122,7 +122,7 @@ function showAndValidate() {
         nameErr.innerText = '';
     }
 
-    if(!price.value) {
+    if (!price.value) {
         priceErr.innerText = 'Please fill in price';
         error = 1;
     } else if (isNaN(price.value)) {
@@ -152,5 +152,5 @@ function showAndValidate() {
         urlErr.innerText = '';
     }
 
-    return error
+    return error;
 }

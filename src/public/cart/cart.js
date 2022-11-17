@@ -21,10 +21,9 @@ if (cartItems != null) {
             only.push(id);
         }
     });
-    cartItems = cartItems.sort( function(a, b) {
+    cartItems = cartItems.sort(function (a, b) {
         return (a.id - b.id);
     });
-    
     cartItems.reverse();
     cartItems.forEach(item => {
         subtotal += Number(item.price);
@@ -49,7 +48,7 @@ if (cartItems != null) {
             imageBox.appendChild(image);
             box.appendChild(infoBox);
 
-            const InfoBoxValues = [itemName, itemPrice, document.createElement('hr') ,parent];
+            const InfoBoxValues = [itemName, itemPrice, document.createElement('hr'), parent];
             InfoBoxValues.forEach(i => {
                 infoBox.appendChild(i);
             });
@@ -59,12 +58,11 @@ if (cartItems != null) {
             });
             only.splice(only.indexOf(item.id), 1);
         } 
-
         increase.addEventListener('click', () => {
             cartItems.push(item);
             localStorage.setItem('cart', JSON.stringify(cartItems));
             difIDS.push(item.id);
-            Number(subtotal+=item.price).toFixed(2);
+            Number(subtotal += item.price).toFixed(2);
             orderTotal = price(subtotal);
             amountInCart.innerHTML = difIDS.filter(x => x == item.id).length;
         });
@@ -72,7 +70,6 @@ if (cartItems != null) {
         decrease.addEventListener('click', () => {
             deleteFromData(cartItems, item, 'cart');
         });
-
     });
 } else {
     const message = createEl('There are no items in your cart.', 'p', 'mx-auto');
@@ -84,7 +81,7 @@ let orderMessage = createEl('', 'p', 'text-xl font-secondary text-right');
 
 function orderDetails(orderedItems) {
     let allItems = [];
-    let orderDetails = {};
+    let orderDets = {};
     let ID;
     if (!localStorage.getItem('orders')) {
         ID = 0;
@@ -96,10 +93,10 @@ function orderDetails(orderedItems) {
         allItems.push(item);
     });
 
-    orderDetails.id = ID;
-    orderDetails.total = orderTotal;
-    orderDetails.time = new Date().toLocaleTimeString();
-    orderDetails.items = allItems;
+    orderDets.id = ID;
+    orderDets.total = orderTotal;
+    orderDets.time = new Date().toLocaleTimeString();
+    orderDets.items = allItems;
 
     return orderDetails;
 }
@@ -130,11 +127,11 @@ function processOrder(order) {
     }
 }
 
-function price(subtotal) {
-    let shipping = subtotal >= 100 ? 0 : 5;
-    subtotalEl.innerHTML = `$${Number(subtotal).toFixed(2)}`;
+function price(sub) {
+    let shipping = sub >= 100 ? 0 : 5;
+    subtotalEl.innerHTML = `$${Number(sub).toFixed(2)}`;
     shippingEl.innerHTML = `$${shipping}`;
-    let totalPrice = Number(subtotal + shipping).toFixed(2);
+    let totalPrice = Number(sub + shipping).toFixed(2);
     total.innerHTML = `$${totalPrice}`;
 
     return totalPrice;
