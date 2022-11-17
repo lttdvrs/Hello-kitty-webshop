@@ -29,8 +29,8 @@ items.forEach(item => {
     const buyNameBox = createEl(' ', 'div', 'flex justify-between');
     const productName = createEl(item.name, 'h1', 'text-wrap mx-auto text-lg text-center');
     const productPrice = createEl(`$${item.price}`, 'p', 'mx-auto text-xl font-secondary');
-    const addToCart = createEl('<i class="fa-solid fa-cart-shopping"></i>', 'button',
-    'bg-pink h-8 w-10 text-dark hover:bg-[#D99DC8]');
+    const addToCart = createEl('<i class="fa-solid fa-cart-shopping"></i>', 'button'
+        , 'bg-pink h-8 w-10 text-dark hover:bg-[#D99DC8]');
     container.appendChild(box);
     box.appendChild(imagebox);
     imagebox.appendChild(linkToItem);

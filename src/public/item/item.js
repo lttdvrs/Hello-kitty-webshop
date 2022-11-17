@@ -35,8 +35,8 @@ function showAll(item) {
     let itemName = createEl(item.name, 'h1', 'text-5xl text-wrap w-[90%]');
     let itemPrice = createEl(`$${item.price}`, 'p', 'text-4xl font-secondary');
     let itemInfo = createEl(item.description, 'p', 'font-secondary text-[#383838] text-xl  text-wrap w-[85%]');
-    let addToCart = createEl('<i class="fa-solid fa-cart-shopping"></i>',
-     'button', 'bg-pink h-16 w-20 text-dark hover:bg-[#D99DC8] border-[2px] border-dark rounded-xl');
+    let addToCart = createEl('<i class="fa-solid fa-cart-shopping"></i>', 'button'
+        , 'bg-pink h-16 w-20 text-dark hover:bg-[#D99DC8] border-[2px] border-dark rounded-xl');
     container1.appendChild(imageBox);
     imageBox.appendChild(imageEl);
 
