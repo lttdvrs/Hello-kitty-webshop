@@ -20,8 +20,8 @@ module.exports = {
             },
             screens: {
                 md: '821px',
-            }
+            },
         },
     },
     plugins: [],
-}
+};
