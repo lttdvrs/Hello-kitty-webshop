@@ -2,16 +2,16 @@
 module.exports = {
     content: [
         "*.{html,js}",
-        "./src/**/**/*.{html,js}", 
+        "./src/**/**/*.{html,js}",
         "./src/public/**/*.{html,js}",
     ],
     theme: {
         colors : {
-          'pink' : '#F7DCEF',
-          'blue' : '#DFF5FD',
-          'brown' : '#543601',
-          'dark' : '#1C1B1B',
-          'white' : '#FFFFFF'
+            'pink' : '#F7DCEF',
+            'blue' : '#DFF5FD',
+            'brown' : '#543601',
+            'dark' : '#1C1B1B',
+            'white' : '#FFFFFF'
         },
         extend: {
             fontFamily : {

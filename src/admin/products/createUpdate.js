@@ -125,7 +125,7 @@ function showAndValidate() {
     if (!price.value) {
         priceErr.innerText = 'Please fill in price';
         error = 1;
-    } else if (isNaN(price.value)) {
+    } else if (Number.isNaN(Number(price.value))) {
         priceErr.innerText = 'You have to fill in a correct number';
         error = 1;
     } else if (!price.value.match(pattern)) {
