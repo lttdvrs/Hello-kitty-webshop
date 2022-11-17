@@ -57,7 +57,7 @@ if (cartItems != null) {
                 parent.appendChild(a);
             });
             only.splice(only.indexOf(item.id), 1);
-        } 
+        }
         increase.addEventListener('click', () => {
             cartItems.push(item);
             localStorage.setItem('cart', JSON.stringify(cartItems));
@@ -115,14 +115,14 @@ order.addEventListener('click', () => {
     container2.appendChild(orderMessage);
 });
 
-function processOrder(order) {
+function processOrder(ordered) {
     if (!localStorage.getItem('orders')) {
         let arrie = [];
-        arrie.push(order);
+        arrie.push(ordered);
         localStorage.setItem('orders', JSON.stringify(arrie));
     } else {
         let orderArr = JSON.parse(localStorage.getItem('orders'));
-        orderArr.push(order);
+        orderArr.push(ordered);
         localStorage.setItem('orders', JSON.stringify(orderArr));
     }
 }

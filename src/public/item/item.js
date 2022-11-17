@@ -11,7 +11,7 @@ let product;
 
 items.forEach(i => {
     if (i.id == idNeeded) {
-        product= i;
+        product = i;
     }
 });
 
@@ -35,14 +35,15 @@ function showAll(item) {
     let itemName = createEl(item.name, 'h1', 'text-5xl text-wrap w-[90%]');
     let itemPrice = createEl(`$${item.price}`, 'p', 'text-4xl font-secondary');
     let itemInfo = createEl(item.description, 'p', 'font-secondary text-[#383838] text-xl  text-wrap w-[85%]');
-    let addToCart = createEl('<i class="fa-solid fa-cart-shopping"></i>', 'button', 'bg-pink h-16 w-20 text-dark hover:bg-[#D99DC8] border-[2px] border-dark rounded-xl');
+    let addToCart = createEl('<i class="fa-solid fa-cart-shopping"></i>',
+     'button', 'bg-pink h-16 w-20 text-dark hover:bg-[#D99DC8] border-[2px] border-dark rounded-xl');
     container1.appendChild(imageBox);
     imageBox.appendChild(imageEl);
 
     container2.appendChild(infoBox);
     infoBox.appendChild(itemName);
     infoBox.appendChild(itemPrice);
-    infoBox.appendChild(createEl('', 'hr' , 'border-[2px] w-[85%]'));
+    infoBox.appendChild(createEl('', 'hr', 'border-[2px] w-[85%]'));
     infoBox.appendChild(itemInfo);
     container2.appendChild(addToCart);
 

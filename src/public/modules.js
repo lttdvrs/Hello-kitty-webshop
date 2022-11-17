@@ -7,11 +7,11 @@ function createEl(input, element, cName = null) {
 
 function fetchData(file) {
     fetch(file)
-    .then((response) => response.json())
-    .then((products) => {
-        localStorage.setItem('items', JSON.stringify(products));
-        window.location.reload();
-    });
+        .then((response) => response.json())
+        .then((products) => {
+            localStorage.setItem('items', JSON.stringify(products));
+            window.location.reload();
+        });
 }
 
 function deleteFromData(array, variable, storage) {
@@ -21,4 +21,4 @@ function deleteFromData(array, variable, storage) {
     window.location.reload();
 }
 
-export { createEl, fetchData, deleteFromData}
+export { createEl, fetchData, deleteFromData };
