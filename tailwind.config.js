@@ -6,20 +6,20 @@ module.exports = {
         "./src/public/**/*.{html,js}",
     ],
     theme: {
-        colors : {
-            'pink' : '#F7DCEF',
-            'blue' : '#DFF5FD',
-            'brown' : '#543601',
-            'dark' : '#1C1B1B',
-            'white' : '#FFFFFF'
+        colors: {
+            pink: '#F7DCEF',
+            blue: '#DFF5FD',
+            brown: '#543601',
+            dark: '#1C1B1B',
+            white: '#FFFFFF',
         },
         extend: {
-            fontFamily : {
-                'primary' : ["Krungthep", "sans-serif"],
-                'secondary' : ["lao-sangam-mn", "sans-serif"]
+            fontFamily: {
+                primary: ["Krungthep", "sans-serif"],
+                secondary: ["lao-sangam-mn", "sans-serif"],
             },
-            screens : {
-                md : '821px'
+            screens: {
+                md: '821px',
             }
         },
     },
