@@ -31,8 +31,7 @@ if (urlParams.get('id')) {
         if (i.id == idNeeded) {
             item = i;
         }
-    })
-    
+    });
     if (!item) {
         alert('No item found');
         idNeeded = null;
@@ -40,14 +39,13 @@ if (urlParams.get('id')) {
     title.innerText = 'Editing a product';
     send.innerText = 'edit';
 } 
-
 let ids = [];
 let URL = document.getElementById('URL');
 
 url.addEventListener('input', (e) => {
     if (isImage(e.target.value)) {
         URL.src = e.target.value;
-        URL.className = 'object-cover h-full w-full'
+        URL.className = 'object-cover h-full w-full';
     } else {
         URL.src = '';
     }
@@ -59,23 +57,23 @@ if (idNeeded) {
     description.value = item.description;
     url.value = item.image;
     URL.src = item.image;
-    URL.className = 'object-cover h-full w-full'
+    URL.className = 'object-cover h-full w-full';
 }
 
 send.addEventListener('click', (e) => {
     e.preventDefault();
     if (idNeeded) {
         if (!showAndValidate()) {
-                items.forEach(i => {
-                    if (i.id == idNeeded) {
-                        i.name = name.value;
-                        i.price = Number(price.value);
-                        i.description = description.value;
-                        i.image = url.value;
-                    }
-                });
-                localStorage.setItem('items', JSON.stringify(items));
-                showMessageAndReload(`${item.name} was updated`);
+            items.forEach(i => {
+                if (i.id == idNeeded) {
+                    i.name = name.value;
+                    i.price = Number(price.value);
+                    i.description = description.value;
+                    i.image = url.value;
+                }
+            });
+            localStorage.setItem('items', JSON.stringify(items));
+            showMessageAndReload(`${item.name} was updated`);
             }
     } else {
         if (!showAndValidate()) {
