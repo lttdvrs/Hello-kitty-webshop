@@ -98,7 +98,7 @@ function orderDetails(orderedItems) {
     orderDets.time = new Date().toLocaleTimeString();
     orderDets.items = allItems;
 
-    return orderDetails;
+    return orderDets;
 }
 
 order.addEventListener('click', () => {
