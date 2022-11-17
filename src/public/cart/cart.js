@@ -16,14 +16,12 @@ if (cartItems != null) {
     cartItems.forEach(item => {
         difIDS.push(item.id);
     });
-    
     difIDS.forEach(id => {
         if (!only.includes(id)) {
             only.push(id);
         }
     });
-
-    cartItems = cartItems.sort(function(a, b) {
+    cartItems = cartItems.sort( function(a, b) {
         return (a.id - b.id);
     });
     
@@ -40,12 +38,12 @@ if (cartItems != null) {
         const infoBox = createEl('', 'div', 'py-3 flex flex-col gap-4');
         const itemName = createEl(item.name, 'h1', 'text-xl text-wrap ');
         const itemPrice = createEl(`$${item.price}`, 'p', 'font-secondary text-xl');
-        const parent = createEl('', 'div', 'w-fit flex gap-3 pt-6 items-center')
+        const parent = createEl('', 'div', 'w-fit flex gap-3 pt-6 items-center');
         const decrease = createEl('-', 'button', 'text-3xl ');
         const amountInCart = createEl(amount, 'p', 'text-xl ');
-        const increase = createEl('+', 'button' , 'text-3xl ');
+        const increase = createEl('+', 'button', 'text-3xl ');
 
-        if (only.includes(item.id)){
+        if (only.includes(item.id)) {
             container1.appendChild(box);
             box.appendChild(imageBox);
             imageBox.appendChild(image);
@@ -95,7 +93,7 @@ function orderDetails(orderedItems) {
         ID = orders.length;
     }
     orderedItems.forEach(item => {
-        allItems.push(item)
+        allItems.push(item);
     });
 
     orderDetails.id = ID;

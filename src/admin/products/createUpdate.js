@@ -38,7 +38,7 @@ if (urlParams.get('id')) {
     }
     title.innerText = 'Editing a product';
     send.innerText = 'edit';
-} 
+}
 let ids = [];
 let URL = document.getElementById('URL');
 
@@ -74,26 +74,24 @@ send.addEventListener('click', (e) => {
             });
             localStorage.setItem('items', JSON.stringify(items));
             showMessageAndReload(`${item.name} was updated`);
-            }
-    } else {
-        if (!showAndValidate()) {
-            const obj = {
-                description: description.value,
-                id: getLastId(),
-                image: url.value,
-                name: name.value,
-                price: Number(price.value),
-            }
-            items.push(obj);
-            localStorage.setItem('items', JSON.stringify(items));
-            showMessageAndReload(`${obj.name} was added`);
         }
+    } else if (!showAndValidate()) {
+        const obj = {
+            description: description.value,
+            id: getLastId(),
+            image: url.value,
+            name: name.value,
+            price: Number(price.value),
+        };
+        items.push(obj);
+        localStorage.setItem('items', JSON.stringify(items));
+        showMessageAndReload(`${obj.name} was added`);
     }
 });
 
 function getLastId() {
-    items.forEach(item => {
-        ids.push(item.id);
+    items.forEach(product => {
+        ids.push(product.id);
     });
 
     return Math.max(...ids) + 1;
@@ -104,16 +102,15 @@ function showMessageAndReload(text) {
     setInterval(() => {
         window.location.reload();
     }, 3000);
-    
 }
 
-function isImage(url) {
-    return /https?:\/\/.+\.(jpg|jpeg|png|webp|avif|gif|svg)/.test(url);
+function isImage(link) {
+    return /https?:\/\/.+\.(jpg|jpeg|png|webp|avif|gif|svg)/.test(link);
 }
 
 function showAndValidate() {
     let error = 0;
-    let pattern = new RegExp(/^[0-9]*(.{1}[0-9]{2})?$/);
+    let pattern = /^[0-9]*(.{1}[0-9]{2})?$/;
 
     if (!name.value) {
         nameErr.innerText = 'Please fill in a product name';
@@ -131,7 +128,7 @@ function showAndValidate() {
     } else if (isNaN(price.value)) {
         priceErr.innerText = 'You have to fill in a correct number';
         error = 1;
-    } else if (!price.value.match(pattern)){
+    } else if (!price.value.match(pattern)) {
         priceErr.innerText = 'Please fill in a number with only 2 or less numbers after the dot.';
         error = 1;
     } else {
