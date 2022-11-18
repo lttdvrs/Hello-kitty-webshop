@@ -2,6 +2,8 @@ import { createEl, fetchData } from "./src/public/modules.js";
 
 const file = './data/products.json';
 const container = document.getElementById('items-container');
+const popupBox =  document.getElementById('popupBox');
+const popupMessage = document.getElementById('popupMessage');
 
 if (!localStorage.getItem('items') || localStorage.getItem('items') == '[]') {
     fetchData(file);
@@ -44,5 +46,17 @@ items.forEach(item => {
     addToCart.addEventListener('click', () => {
         cartArr.push(item);
         localStorage.setItem('cart', JSON.stringify(cartArr));
+        popUp(item.name);
     });
+
 });
+
+function popUp(item) {
+
+    popupBox.className = 'inline';
+    popupMessage.innerText = `${item} is added to card`;
+    
+    setTimeout(() => {
+        popupBox.className = 'hidden';
+    }, 1200)
+}
