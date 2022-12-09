@@ -1,5 +1,8 @@
 # Hello Kitty Webshop
 
+DISCLAIMER-------
+Dit is voor een opdracht gemaakt, en dus niet een 'echte' webshop
+----------
 Welkom bij DE plek waar je de allerbeste Hello Kitty producten kan kopen.
 Bestellingen vanaf $100 krijgen gratis verzendkosten!
 
